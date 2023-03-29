@@ -12,16 +12,30 @@ In certain situations, the purpose is clear when the content is visually display
 
 ### a. aria-label
 
-[aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label attribute adds a descriptive label to an element that is read by assistive technologies e.g screen readers
+The [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute adds a descriptive label to an element that is read by assistive technologies e.g screen readers
 
 ### b. aria-labelledby
 
-[aria-labelledby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute provides a description for an element by referencing other elements on the webpage.
+The [aria-labelledby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute provides a description for an element by referencing other elements on the webpage.
 
 ## 2. Helper/Descriptive Text
 
-- Approach One: Placing a hint and label as spans inside the label texts ensures they are both read by screenreaders. This also increases the hit area, when a user taps on the content inside the label element, it focuses on the respective input element.
-- Approach Two: Placing the descriptive text in a p element and reference it using [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). Note, aria-describedby is not supported by IE11
+- **Approach One:** Placing a hint and label as spans inside the label texts ensures they are both read by screenreaders. This also increases the hit area, when a user taps on the content inside the label element, it focuses on the respective input element.
+
+```html
+<label>
+  <span>Password</span>
+  <span>Password length must be above 8 characters</span>
+</label>
+```
+
+- **Approach Two:** Placing the descriptive text in a p element and reference it using [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). Note, aria-describedby is not supported by IE11
+
+```html
+<label>Password</label>
+<p id="description">Password length must be above 8 characters</p>
+<input type="password" id="password" aria-labelledby="description"/>
+```
 
 ## 3. Input Types
 
@@ -36,6 +50,7 @@ In certain situations, the purpose is clear when the content is visually display
 1. Avoid placeholder texts to provide hints.
 2. Not using proper semantic element i.e using `div` instead of `form`
 3. Relying on visual interpretation only.
+4. Changing border color or using color only to communicate error.
 
 # Importance of accessible forms
 
