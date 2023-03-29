@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Form Example</title>
+</head>
+<body>
+  <form action="" method="get" class="form-example">
+    <div class="form-example">
+      <label for="name">Enter your name: </label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div class="form-example">
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <fieldset>
+      <legend>Choose your favorite language</legend>
+  
+      <input type="radio" id="javascript" name="language" value="J">
+      <label for="javascript">Javascript</label><br>
+  
+      <input type="radio" id="python" name="language" value="P">
+      <label for="python">Python</label><br>
+  
+      <input type="radio" id="ruby" name="language" value="R">
+      <label for="ruby">Ruby</label>
+    </fieldset>
+    <div class="form-example">
+      <input type="submit" aria-label="submit" value="Subscribe!">
+    </div>
+  </form>
+</body>
+</html>
