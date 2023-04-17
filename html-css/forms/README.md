@@ -55,21 +55,21 @@ A label with descriptive text for each input should be available. Associate a la
 
 It is essential to inform users of the outcome of their form submission, whether it is successful or not.
 
-### a. Errors
+### Errors
 
-#### Overall Feedback
+#### a. Overall Feedback
 
 There are several techniques that can be implemented to communicate overall error feedback:
 
-1. **Document Title.**
+##### Document Title.
    The document title i.e `title` tag, is the first part of a web page to be read out. Screen reader users will immediately access any information if something went wrong with their submission.
 
 Useful when page reloads after a server request.
 
-2. **Summary.**
+##### Summary.
    It is helpful to list errors at the top, before the form
 
-#### In-line Feedback
+#### b. In-line Feedback
 
 ## 5. Validation
 
