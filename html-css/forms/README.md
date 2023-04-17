@@ -41,7 +41,7 @@ Each label should be closest to its form control.
 
 ## 3. Input Types
 
-There are numerous different HTML input types e.g `text`, `password`, `url`. Each helps with collecting specific data from users, use them appropriately.
+There are numerous different HTML input types e.g `text`, `password`, `url`. They each help with collecting specific data from users. Use them appropriately.
 
 A label with descriptive text for each input should be available. Associate a label with its corresponding input by matching `for` and `id` attributes.
 
@@ -49,9 +49,27 @@ A label with descriptive text for each input should be available. Associate a la
 <label for="name">Name</label> <input id="name" type="text" />
 ```
 
-(List of HTML input types)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types]
+[List of HTML input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types)
 
-## 4. Errors
+## 4. Feedback
+
+It is essential to inform users of the outcome of their form submission, whether it is successful or not.
+
+### a. Errors
+
+#### Overall Feedback
+
+There are several techniques that can be implemented to communicate overall error feedback:
+
+1. **Document Title.**
+   The document title i.e `title` tag, is the first part of a web page to be read out. Screen reader users will immediately access any information if something went wrong with their submission.
+
+Useful when page reloads after a server request.
+
+2. **Summary.**
+   It is helpful to list errors at the top, before the form
+
+#### In-line Feedback
 
 ## 5. Validation
 
