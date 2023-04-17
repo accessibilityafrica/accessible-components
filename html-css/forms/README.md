@@ -20,7 +20,7 @@ The [aria-labelledby](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 
 ## 2. Helper/Descriptive Text
 
-- **Approach One:** Placing a hint and label as spans inside the label texts ensures they are both read by screenreaders. This also increases the hit area, when a user taps on the content inside the label element, it focuses on the respective input element.
+- **Approach One:** Placing a hint and label as spans inside the label texts ensures they are both read by screenreaders. This also increases the hit area i.e when a user taps on the content inside the label element, it focuses on the respective input element. This is useful on small screens and to some people with motor disabilities.
 
 ```html
 <label>
@@ -29,15 +29,27 @@ The [aria-labelledby](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 </label>
 ```
 
-- **Approach Two:** Placing the descriptive text in a p element and reference it using [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). Note, aria-describedby is not supported by IE11
+- **Approach Two:** Placing the descriptive text in a p element and reference it using [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). Note, aria-describedby is not supported by IE11. Hit area is not increased.
 
 ```html
-<label>Password</label>
+<label for="password">Password</label>
 <p id="description">Password length must be above 8 characters</p>
-<input type="password" id="password" aria-labelledby="description"/>
+<input type="password" id="password" aria-labelledby="description" />
 ```
 
+Each label should be closest to its form control.
+
 ## 3. Input Types
+
+There are numerous different HTML input types e.g `text`, `password`, `url`. Each helps with collecting specific data from users, use them appropriately.
+
+A label with descriptive text for each input should be available. Associate a label with its corresponding input by matching `for` and `id` attributes.
+
+```html
+<label for="name">Name</label> <input id="name" type="text" />
+```
+
+(List of HTML input types)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types]
 
 ## 4. Errors
 
