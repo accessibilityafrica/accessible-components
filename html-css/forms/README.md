@@ -67,9 +67,22 @@ There are several techniques that can be implemented to communicate overall erro
 Useful when page reloads after a server request.
 
 ##### Summary.
-   It is helpful to list errors at the top, before the form
+   It is helpful to list errors at the top, before the form.
+   
+   This section should have a distinct heading that is easily identified.
+   
+   If page does not reload/refresh, make use of `aria-live="assertive"` or `role="alert"`. These ensure that users of assistive technology i.e screen readers are notified that there are errors.
+
+```html
+<div aria-live="assertive" id="message"></div>
+```
+
+```html
+<div role=""alert"></div>
+```
 
 #### b. In-line Feedback
+  Place the relevant error message just above the field. Placing it below increases the chances of it being obscured by browser autocomplete panel or by the onscreen keyboard.
 
 ## 5. Validation
 
