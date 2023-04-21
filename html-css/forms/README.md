@@ -83,6 +83,8 @@ Useful when page reloads after a server request.
 
 #### b. In-line Feedback
   Place the relevant error message just above the field. Placing it below increases the chances of it being obscured by browser autocomplete panel or by the onscreen keyboard.
+  
+  Set `aria-invalid="true"` to the form control with an error. When a user focuses on it, the screen reader will announce the need for attention.
 
 ## 5. Validation
 
