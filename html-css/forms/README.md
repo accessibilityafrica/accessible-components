@@ -88,7 +88,26 @@ Useful when page reloads after a server request.
 
 ## 5. Validation
 
+### HTML5 Validation
+Include the `required` attribute in form controls to indicate programmatically when they are mandatory. 
+
+When the HTML5 `required` attribute is detected, modern web browsers will automatically assign the `aria-required` attribute a value of "true". 
+
+Providing it redundantly can offer additional support for assistive technologies in web browsers that may not properly convey it.
+
+Including a description in the label will communicate to users who do not use assistive technologies.
+
+```html
+<label for="email">Email (required): </label>
+<input type="email" name="email" id="email" required aria-required="true">
+```
+
+#### `pattern` attribute
+
 ## 6. Grouping
+
+## 7. Navigaton
+Ensure it is possible to navigate and complete the form using only the keyboard, allowing those who don't have a mouse to still fill and submit it.
 
 # What to avoid
 
@@ -102,7 +121,7 @@ Useful when page reloads after a server request.
 1. Form controls are more readily identifiable and comprehensible for individuals who use screen readers
 2. Enhancing layout structure, instructions and feedback in forms aids individuals with cognitive impairments in comprehension and filling out of the form.
 
-# Resources
+# Read More
 
-1. MDN Accessible Form Blueprint.
+1. [Guide to Accessible Form Validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/)
 2. [W3C Forms Tutorial](https://www.w3.org/WAI/tutorials/forms/)
